@@ -35,19 +35,19 @@ def fi_op():
     f.write("hey buddy how are you.")
     f.close()
 
-def fi_re():
+def fi_re():    #to read from a file
     i=input("Enter file to read:")
     f=open(i,"r")
     print(f.read())
     f.close()
 
-def fi_ap():
+def fi_ap():  #for appending in a existing file
     i=input("Enteer file to append anything:")
     f=open(i,"a")
     f.write("\nThis is appended line")
     f.close
 
-def fi_cr():
+def fi_cr():    #for creating new file
     i=input("Enteer new file name:")
     f=open(i,"x")
     f.write("nayi file bnegi")
@@ -59,6 +59,7 @@ if __name__=="__main__":
     print("-"*50)
     excep()
     print("-"*50)
-    #tef()
+    tef()
     print("-"*50)
     fi_op()
+    #and other object need to be created for reading file(fi_re()),creating new file (fi_cr()) and for appending (fi_ap())
