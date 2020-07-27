@@ -8,7 +8,7 @@ idlist=[]
 try:
     email_user = "sacjau11@gmail.com"
     #To hide password while writing
-    password = input("password") #getpass.getpass(prompt='Enter your Password :: ')  
+    password = getpass.getpass(prompt='Enter your Password :: ')  
     mail = imaplib.IMAP4_SSL('imap.gmail.com')	
     mail.login(email_user, password)
     mail.select() # connect to mailbox (default is 'INBOX').
