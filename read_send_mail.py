@@ -75,7 +75,7 @@ for i in range(len(send_id)):
     message['Subject'] = 'A test mail sent by Python.'
     message.attach(MIMEText(mail_Body, 'plain'))
     text = message.as_string()
-    #print(text)
+    #print(text).
     session.sendmail(sender_address, send_id[i] , text)
     print('Mail Sent to : ',send_id[i])
 	session.quit()
