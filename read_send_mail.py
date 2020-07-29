@@ -63,12 +63,12 @@ for i in range(len(idlist)):
 
 # Create a secure TLS context and send mails
 for i in range(len(send_id)):
-	mail_Body = " Hy reply from bot, will contact you when we get free."
-	message = MIMEMultipart()
-	session = smtplib.SMTP('smtp.gmail.com', 587)
-	session.starttls()
-	session.login(sender_address, password)
-	#Email details
+    mail_Body = " Hy reply from bot, will contact you when we get free."
+    message = MIMEMultipart()
+    session = smtplib.SMTP('smtp.gmail.com', 587)
+    session.starttls()
+    session.login(sender_address, password)
+    #Email details
     message['From'] = sender_address
     message['To'] = send_id[i]
     message['cc'] = '2017cscloudsachin5788@poornima.edu.in'
@@ -78,5 +78,5 @@ for i in range(len(send_id)):
     #print(text).
     session.sendmail(sender_address, send_id[i] , text)
     print('Mail Sent to : ',send_id[i])
-	session.quit()
+    session.quit()
 
